@@ -5,8 +5,7 @@
 #               : determine what functions are called in executing application
 #               : use for investigation C plus plus source code
 # author        : Dai Nguyen-Van
-# email         : dai.nguyenvan@toshiba-tsdv.com
-# company       : Toshiba Software Development Vietnam
+# email         : dainv1989@gmail.com
 # update        :
 #=======================================
 # 07/10/2013    : initialization
