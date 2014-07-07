@@ -1,4 +1,4 @@
 perl-script
 ===========
 
-Insert debug statement to every function in cpp source file
+Some short, useful perl scripts are frequently used for testing, analysis ...
