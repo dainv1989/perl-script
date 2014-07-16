@@ -16,10 +16,8 @@ use autodie qw(open close);
 my $dic = $ARGV[0];
 my $pwd = $ARGV[1];
 
-# read input cipher texts and dictionary
 open (my $input, '<', $pwd);
 my @ciphers = <$input>;
-# remove end of line characters
 chomp(@ciphers);
 
 print "\n";
@@ -58,20 +56,15 @@ foreach my $cipher(@ciphers){
         # encrypt each word with SHA1 algorithm
         my $encrypt_text = $sha->hexdigest;
 
-        # compare with cipher text, if matches
         if($encrypt_text eq $cipher){
             $password = $_;
             last;
         }
-        # count number of tested words
         $count++;
     }
 
-    # print out result, "*" if not found
     print "$cipher\:\:$password\t[ATTEMPT\:\:$count words]\n";
-    # close dictionary file handle
     close ($dict);
 }
 
-# close input file handle
 close($input);
